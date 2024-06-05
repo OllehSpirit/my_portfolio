@@ -171,22 +171,85 @@
 
     animation: shape 20s linear infinite alternate-reverse;
 }
-@keyframes shape{
-    50%{
+
+@keyframes shape {
+    50% {
         transform: rotate(60deg);
     }
-    75%{
+
+    75% {
         transform: rotate(75deg);
     }
-    100%{
+
+    100% {
         transform: rotate(65deg);
     }
 }
 
 
-@media (max-width:1300px){
+@media (max-width:800px) {
+
+    .main {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    .intro {
+        width: 95%;
+    }
 
 
+    .intro p:nth-child(1) {
+        font-size: 24px;
+    }
     
+    .intro p:nth-child(2) {
+        font-size: 30px;
+    }
     
+    .intro p:nth-child(3) {
+        font-size: 20px;
+    }
+    
+    .endIntro {
+        font-size: 24px;
+    }
+
+
+
+    .pic {
+        width: 95%;
+    }
+    .pic div {
+        width: 40vw;
+        height: 40vw;
+    }
+    
+    .pic div::before {
+        top: -100px;
+        left: 210px;
+    
+        width: 50vw;
+        height: 50vw;
+    }
+    
+
+}
+
+@media (max-width:500px) {
+
+    .main {
+        padding: 50px;
+    }
+    .intro {
+        width: 100%;
+    }
+
+    .pic div::before {
+        top: -70px;
+        left: 110px;
+    
+        width: 60vw;
+        height: 60vw;
+    }
+
 }
