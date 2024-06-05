@@ -1,0 +1,51 @@
+.letterSpacingAnimation{
+    opacity: 0;
+    letter-spacing: 20px;
+    animation: letterSpacingAnimation .5s linear .5s forwards;
+}
+@keyframes letterSpacingAnimation {
+    100% {
+        opacity: 1;
+        letter-spacing: normal;
+    }
+}
+
+
+
+.toRightAnimation{
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: toRightAnimation .5s linear 1s forwards;
+}
+@keyframes toRightAnimation {
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+.toLeftAnimation{
+    opacity: 0;
+    transform: translateX(100px);
+    animation: toLeftAnimation .5s linear 1.5s forwards;
+}
+@keyframes toLeftAnimation {
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toTopAnimation{
+    opacity: 0;
+    transform: translateY(50px);
+    animation: toTopAnimation .5s linear 2s forwards;
+}
+@keyframes toTopAnimation {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -1,6 +1,7 @@
 :root {
-    --mainColor: rgb(168, 134, 228, .75);
-    /* --mainColor: rgb(240, 87, 99, .75); */
+    /* --mainColor: rgb(168, 134, 228, .75); */
+    --mainColor: #aaa;
+    --aa: rgb(240, 87, 99, .75);
     /* --mainColor: rgb(89, 178, 86, .75); */
     /* --mainColor: rgba(98, 86, 178, 0.75); */
 
@@ -15,6 +16,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    user-select: none;
 }
 
 .header {
@@ -200,14 +202,113 @@ body {
     z-index: -1;
     background-color: var(--secondColor);
 
+    opacity: 0;
     transition: all .5s;
 }
-
 .listHeader>div a:hover::before {
+    opacity: 1;
     padding: 5px;
     top: -8px;
     width: 105%;
     border-radius: 7px;
+}
+
+.active a{
+    content: '';
+    position: absolute;
+    height: 25px;
+
+    z-index: -1;
+    background-color: var(--secondColor);
+
+    padding: 5px;
+    width: 105%;
+    border-radius: 7px;
+
+    color: white;
+    
+}
+.active a span{
+    animation: colorChange 1s forwards;
+    
+}
+.active a span:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.active a span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.active a span:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.active a span:nth-child(4) {
+    animation-delay: .4s;
+}
+
+.active a span:nth-child(5) {
+    animation-delay: .5s;
+}
+
+.active a span:nth-child(6) {
+    animation-delay: .6s;
+}
+
+.active a span:nth-child(7) {
+    animation-delay: .7s;
+}
+
+.active a span:nth-child(8) {
+    animation-delay: .8s;
+}
+@keyframes colorChange {
+    100%{
+        color: black;
+    }
+}
+
+
+
+.listHeader>div a:hover {
+    color: white;
+    transition: all 1s;
+}
+.listHeader>div a:hover span:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.listHeader>div a:hover span:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.listHeader>div a:hover span:nth-child(3) {
+    transition-delay: .3s;
+}
+
+.listHeader>div a:hover span:nth-child(4) {
+    transition-delay: .4s;
+}
+
+.listHeader>div a:hover span:nth-child(5) {
+    transition-delay: .5s;
+}
+
+.listHeader>div a:hover span:nth-child(6) {
+    transition-delay: .6s;
+}
+
+.listHeader>div a:hover span:nth-child(7) {
+    transition-delay: .7s;
+}
+
+.listHeader>div a:hover span:nth-child(8) {
+    transition-delay: .8s;
+}
+
+.listHeader>div a:hover{
+    color: black;
 }
 
 

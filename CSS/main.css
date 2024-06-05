@@ -18,34 +18,12 @@
 .intro p:nth-child(1) {
     font-size: 2vw;
     margin: 0;
-
-    opacity: 0;
-    letter-spacing: 20px;
-    animation: p1 1s linear .5s forwards;
-}
-
-@keyframes p1 {
-    100% {
-        opacity: 1;
-        letter-spacing: normal;
-    }
 }
 
 .intro p:nth-child(2) {
     font-size: 3.8vw;
     margin-top: 20px;
     margin-bottom: 40px;
-
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: p2 .5s linear 1.5s forwards;
-}
-
-@keyframes p2 {
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
 }
 
 .intro p:nth-child(3) {
@@ -53,34 +31,12 @@
     color: var(--subText);
     margin: 0;
     line-height: 1.5em;
-
-    opacity: 0;
-    transform: translateX(100px);
-    animation: p3 .5s linear 2s forwards;
-}
-
-@keyframes p3 {
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
 }
 
 .endIntro {
     position: relative;
     font-size: 2vw;
     margin-top: 40px;
-
-    opacity: 0;
-    transform: translateY(50px);
-    animation: p4 .5s linear 2.5s forwards;
-}
-
-@keyframes p4 {
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
 }
 
 .endIntro::after {
@@ -169,10 +125,16 @@
 
     z-index: -2;
 
-    animation: shape 20s linear infinite alternate-reverse;
+    animation: shape 20s linear infinite alternate;
 }
 
 @keyframes shape {
+    0% {
+        transform: rotate(60deg);
+    }
+    25% {
+        transform: rotate(70deg);
+    }
     50% {
         transform: rotate(60deg);
     }
@@ -213,6 +175,9 @@
     .endIntro {
         font-size: 24px;
     }
+    .endIntro::before {
+        width: 120px;
+    }
 
 
 
@@ -220,8 +185,8 @@
         width: 95%;
     }
     .pic div {
-        width: 40vw;
-        height: 40vw;
+        width: 45vw;
+        height: 45vw;
     }
     
     .pic div::before {
@@ -245,8 +210,8 @@
     }
 
     .pic div::before {
-        top: -70px;
-        left: 110px;
+        top: -60px;
+        left: 170px;
     
         width: 60vw;
         height: 60vw;
