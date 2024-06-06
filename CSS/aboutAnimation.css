@@ -1,0 +1,25 @@
+.letterSpacingAnimation{
+    opacity: 0;
+    letter-spacing: 20px;
+    animation: letterSpacingAnimation .5s linear .5s forwards;
+}
+@keyframes letterSpacingAnimation {
+    100% {
+        opacity: 1;
+        letter-spacing: normal;
+    }
+}
+
+
+
+.toLeftAnimation{
+    opacity: 0;
+    transform: translateX(100px);
+    animation: toLeftAnimation .5s linear 1.5s forwards;
+}
+@keyframes toLeftAnimation {
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

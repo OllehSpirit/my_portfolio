@@ -1,36 +1,31 @@
 .main {
-    margin-top: 100px;
+    
     display: flex;
     justify-content: center;
     padding: 80px;
+    padding-top: 150px;
     column-gap: 10%;
     overflow: hidden;
+
 }
 
 .intro {
     width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .intro p {
     font-family: sans-serif;
 }
 
-.intro p:nth-child(1) {
-    font-size: 2vw;
-    margin: 0;
-}
 
-.intro p:nth-child(2) {
+.intro p:nth-child(1) {
     font-size: 3.8vw;
     margin-top: 20px;
     margin-bottom: 40px;
-}
-
-.intro p:nth-child(3) {
-    font-size: 1.3vw;
-    color: var(--subText);
-    margin: 0;
-    line-height: 1.5em;
 }
 
 .endIntro {
@@ -59,16 +54,17 @@
     width: 13vw;
     height: 3px;
     background-color: var(--secondColor);
+    border: qpx solid var(--mainColor);
 }
 
 
 .pic {
     width: 25%;
-    height: 60vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 40px;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .pic div {
@@ -153,7 +149,7 @@
 
     .main {
         flex-direction: column;
-        padding-top: 50px;
+        padding-top: 150px;
     }
     .intro {
         width: 95%;
@@ -161,15 +157,7 @@
 
 
     .intro p:nth-child(1) {
-        font-size: 18px;
-    }
-    
-    .intro p:nth-child(2) {
-        font-size: 30px;
-    }
-    
-    .intro p:nth-child(3) {
-        font-size: 20px;
+        font-size: 40px;
     }
     
     .endIntro {
@@ -182,6 +170,7 @@
 
 
     .pic {
+        padding-top: 200px;
         width: 95%;
     }
     .pic div {
@@ -196,17 +185,50 @@
         width: 50vw;
         height: 50vw;
     }
+    @keyframes shape {
+        0% {
+            transform: rotate(70deg);
+        }
+        25% {
+            transform: rotate(80deg);
+        }
+        50% {
+            transform: rotate(70deg);
+        }
+    
+        75% {
+            transform: rotate(75deg);
+        }
+    
+        100% {
+            transform: rotate(65deg);
+        }
+    }
     
 
 }
 
-@media (max-width:500px) {
-
-    .main {
-        padding: 50px;
+@media (max-width:555px) {
+    .main{
+        padding: 30px;
+        padding-top: 150px;
     }
+
     .intro {
         width: 100%;
+        height: 50vh;
+    }
+    .intro p:nth-child(1) {
+        font-size: 30px;
+    }
+    
+    .endIntro {
+        font-size: 24px;
+    }
+
+    .pic {
+        padding-top: 0px;
+        height: 50vh;
     }
 
     .pic div::before {
