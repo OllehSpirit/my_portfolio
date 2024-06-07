@@ -90,10 +90,6 @@
 
 
 @media (max-width:800px) {
-    .about {
-        flex-direction: column-reverse;
-        padding: 80px;
-    }
 
     .titleSkills {
         font-size: 30px;
@@ -105,31 +101,15 @@
     .skills {
         padding: 30px;
     }
-
-}
-
-
-@media (max-width:555px) {
-    .skills {
-        padding: 30px;
-    }
-
     .containerSkills {
         padding: 0;
         padding-top: 80px;
         padding-bottom: 80px;
     }
-
-    /* .intro p:nth-child(1) {
-        font-size: 30px;
-    }
-
-    .endIntro {
-        font-size: 24px;
-    } */
-
-    .pic2 {
-        padding-top: 0px;
+    .cardSkill{
+        width: 30vw;
+        height: 30vw;
+        margin-bottom: 10%;
     }
 
 }
