@@ -1,5 +1,5 @@
 .main {
-    
+
     display: flex;
     justify-content: center;
     padding: 80px;
@@ -56,6 +56,85 @@
     background-color: var(--secondColor);
     border: qpx solid var(--mainColor);
 }
+
+
+
+.downloadCV {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 60px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    background-color: #333;
+
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.downloadCV::before,
+.downloadCV::after {
+    content: '';
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    z-index: -1;
+}
+
+.downloadCV::before {
+    left: -20px;
+}
+
+.downloadCV::after {
+    right: -20px;
+}
+
+.downloadCV:hover::before {
+    animation: leftCircle .6s linear forwards;
+}
+
+@keyframes leftCircle {
+    60% {
+        left: 46%;
+        transform: scale(1);
+    }
+
+    100% {
+        left: 46%;
+        transform: scale(12);
+    }
+}
+
+.downloadCV:hover::after {
+    animation: rightCircle .6s linear forwards;
+}
+
+@keyframes rightCircle {
+    60% {
+        right: 46%;
+        transform: scale(1);
+    }
+
+    100% {
+        right: 46%;
+        transform: scale(12);
+    }
+}
+
 
 
 .pic {
@@ -128,9 +207,11 @@
     0% {
         transform: rotate(60deg);
     }
+
     25% {
         transform: rotate(70deg);
     }
+
     50% {
         transform: rotate(60deg);
     }
@@ -151,6 +232,7 @@
         flex-direction: column;
         padding-top: 150px;
     }
+
     .intro {
         width: 95%;
     }
@@ -159,57 +241,69 @@
     .intro p:nth-child(1) {
         font-size: 40px;
     }
-    
+
     .endIntro {
         font-size: 24px;
     }
+
     .endIntro::before {
         width: 120px;
     }
 
-
+    .downloadCV {
+        width: fit-content;
+        margin-top: 60px;
+        height: fit-content;
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
     .pic {
         padding-top: 200px;
         width: 95%;
     }
+
     .pic div {
         width: 45vw;
         height: 45vw;
     }
-    
+
     .pic div::before {
         top: -100px;
         left: 210px;
-    
+
         width: 50vw;
         height: 50vw;
     }
+
     @keyframes shape {
         0% {
             transform: rotate(70deg);
         }
+
         25% {
             transform: rotate(80deg);
         }
+
         50% {
             transform: rotate(70deg);
         }
-    
+
         75% {
             transform: rotate(75deg);
         }
-    
+
         100% {
             transform: rotate(65deg);
         }
     }
-    
+
 
 }
 
 @media (max-width:555px) {
-    .main{
+    .main {
         padding: 30px;
         padding-top: 150px;
     }
@@ -218,10 +312,11 @@
         width: 100%;
         height: 50vh;
     }
+
     .intro p:nth-child(1) {
         font-size: 30px;
     }
-    
+
     .endIntro {
         font-size: 24px;
     }
@@ -234,9 +329,16 @@
     .pic div::before {
         top: -60px;
         left: 170px;
-    
+
         width: 60vw;
         height: 60vw;
     }
 
+}
+
+@media (max-width:375px) {
+    .downloadCV{
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
 }

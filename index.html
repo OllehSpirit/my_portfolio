@@ -12,10 +12,9 @@
   <link rel="stylesheet" href="./CSS/header.css">
 
   <link rel="stylesheet" href="./CSS/main.css">
-  <link rel="stylesheet" href="./CSS/mainAnimation.css">
+  <link rel="stylesheet" href="./CSS/Animation.css">
 
   <link rel="stylesheet" href="./CSS/about.css">
-  <link rel="stylesheet" href="./CSS/aboutAnimation.css">
 
 
 
@@ -76,7 +75,6 @@
 
   <!--__________________________________________________________ MAIN _______________________________________________________-->
   <div id="home" class="main">
-
     <div class="intro">
 
       <p>
@@ -85,6 +83,9 @@
       </p>
 
       <p class="endIntro">Let’s Work Together</p>
+
+      <div class="downloadCV">Download CV</div>
+
 
     </div>
 
@@ -98,7 +99,12 @@
 
   <!--__________________________________________________________ ABOUT _______________________________________________________-->
   <div id="about" class="about">
+    <div class="picAbout">
+      <div></div>
+    </div>
+
     <div id="about" class="aboutContainer">
+
 
       <p>
         A Bit About Me
@@ -110,14 +116,21 @@
         As an IT-Engineer i believe that leaning AI and machine learning will open doors to make our websites more
         dynamic and interactive.
       </p>
-      <!-- <p class="endIntro">Let’s Work Together</p> -->
 
-      <!-- <div class="downloadCV">Download CV</div> -->
 
     </div>
   </div>
 
+
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+  <!-- <script>
+    const header = document.getElementById('pic')
+    window.addEventListener('scroll',()=>{
+      pic.style.transform = `translateY(${window.scrollY * 1}px)` 
+    })
+  </script> -->
 
 </body>
 
