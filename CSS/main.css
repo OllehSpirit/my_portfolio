@@ -118,6 +118,24 @@
         transform: scale(12);
     }
 }
+.downloadCV:not(:hover)::before {
+    animation: removeLeftCircle .6s linear forwards;
+}
+@keyframes removeLeftCircle {
+    0% {
+        left: 46%;
+        transform: scale(12);
+    }
+
+    40% {
+        left: 46%;
+        transform: scale(1);
+    }
+
+    100% {
+        left: -20px;
+    }
+}
 
 .downloadCV:hover::after {
     animation: rightCircle .6s linear forwards;
@@ -132,6 +150,24 @@
     100% {
         right: 46%;
         transform: scale(12);
+    }
+}
+.downloadCV:not(:hover)::after {
+    animation: removeRightCircle .6s linear forwards;
+}
+@keyframes removeRightCircle {
+    0% {
+        right: 46%;
+        transform: scale(12);
+    }
+
+    40% {
+        right: 46%;
+        transform: scale(1);
+    }
+
+    100% {
+        right: -20px;
     }
 }
 

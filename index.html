@@ -10,11 +10,10 @@
 
 
   <link rel="stylesheet" href="./CSS/header.css">
-
-  <link rel="stylesheet" href="./CSS/main.css">
   <link rel="stylesheet" href="./CSS/Animation.css">
-
+  <link rel="stylesheet" href="./CSS/main.css">
   <link rel="stylesheet" href="./CSS/about.css">
+  <link rel="stylesheet" href="./CSS/skills.css">
 
 
 
@@ -22,12 +21,14 @@
 
   <script defer src="./JavaScript/aboutAnimation.js"></script>
 
+  <script defer src="./JavaScript/skillsAnimation.js"></script>
+
 </head>
 
 <body>
 
   <!--__________________________________________________________ HEADER _______________________________________________________-->
-  <div class="header">
+  <div id="header" class="header">
 
     <div class="containerLogo">
       <div class="logo">
@@ -122,15 +123,65 @@
   </div>
 
 
+
+  <!--__________________________________________________________ ABOUT _______________________________________________________-->
+  <div id="skills" class="skills">
+    <div class="titleSkills">What I Love</div>
+
+    <div class="containerSkills">
+
+      <div class="cardSkill">
+        <span style="color: #e34c26 ;">H T M L</span>
+        <div></div>
+      </div>
+
+      <div class="cardSkill">
+        <span style="color: #264de4 ;">C S S</span>
+        <div></div>
+      </div>
+
+      <div class="cardSkill">
+        <div></div>
+        <span style="color: #f0db4f ;">J a v a S c r i p t</span>
+      </div>
+
+      <div class="cardSkill">
+        <div></div>
+        <span style="color: #7cc5d9 ;">R e a c t J S</span>
+      </div>
+
+      <div class="cardSkill">
+        <div></div>
+        <span style="color: #563d7c;">B o o t s t r a p</span>
+      </div>
+
+      <div class="cardSkill">
+        <div></div>
+        <span style="color: #e495a8;">Fi g m a</span>
+      </div>
+      
+    </div>
+  </div>
+
+
+
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-  <!-- <script>
-    const header = document.getElementById('pic')
-    window.addEventListener('scroll',()=>{
-      pic.style.transform = `translateY(${window.scrollY * 1}px)` 
-    })
-  </script> -->
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos >= currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+        document.getElementById("header").style.transition = "all .3s";
+      } else {
+        document.getElementById("header").style.top = "-80px";
+        document.getElementById("header").style.transition = "all .3s";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
 
 </body>
 

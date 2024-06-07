@@ -12,7 +12,6 @@ const p1_Main_Observer = new IntersectionObserver((elements) => {
         }
         else {
             document.querySelectorAll('.listHeader div:nth-child(1)')[0].classList.remove('active')
-            document.querySelectorAll('.listHeader div:nth-child(2)')[0].classList.add('active')
         }
     })
 })
