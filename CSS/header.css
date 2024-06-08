@@ -1,5 +1,6 @@
 :root {
     --mainColor: rgb(168, 134, 228);
+    --mainColorOpacity: rgb(168, 134, 228, .3);
     /* --mainColor: #aaa; */
     /* --mainColor: rgb(240, 87, 99, .75); */
     /* --mainColor: rgb(89, 178, 86, .75); */

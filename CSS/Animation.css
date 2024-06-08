@@ -29,9 +29,9 @@
 .toLeftAnimation{
     opacity: 0;
     transform: translateX(100px);
-    animation: toRightAnimation .5s linear 2s forwards;
+    animation: toLeftAnimation .5s linear 2s forwards;
 }
-@keyframes toRightAnimation {
+@keyframes toLeftAnimation {
     100% {
         opacity: 1;
         transform: translateX(0px);
@@ -53,11 +53,74 @@
 .letterSpacingAnimation{
     opacity: 0;
     letter-spacing: 20px;
-    animation: letterSpacingAnimation .5s linear .5s forwards;
+    animation: letterSpacingAnimation .5s linear forwards;
 }
 @keyframes letterSpacingAnimation {
     100% {
         opacity: 1;
         letter-spacing: normal;
+    }
+}
+
+
+
+/* Animation For Skills */
+.scaleAnimation{
+    opacity: 0;
+    transform: scale(0);
+    animation: scaleAnimation .5s linear forwards;
+}
+.scaleAnimation:nth-child(1){
+    animation-delay: .5s;
+}
+.scaleAnimation:nth-child(2){
+    animation-delay: 1s;
+}
+.scaleAnimation:nth-child(3){
+    animation-delay: 1.5s;
+}
+.scaleAnimation:nth-child(4){
+    animation-delay: 2s;
+}
+.scaleAnimation:nth-child(5){
+    animation-delay: 2.5s;
+}
+.scaleAnimation:nth-child(6){
+    animation-delay: 3s;
+}
+@keyframes scaleAnimation {
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.moveProjectsAnimation:nth-child(odd){
+    opacity: 0;
+    transform: translateY(100px);
+    animation: toTopAnimation .5s linear forwards;
+}
+.moveProjectsAnimation:nth-child(even){
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: toTopAnimation .5s linear forwards;
+}
+.moveProjectsAnimation:nth-child(1){
+    animation-delay: 1s;
+}
+.moveProjectsAnimation:nth-child(2){
+    animation-delay: 1.5s;
+}
+.moveProjectsAnimation:nth-child(3){
+    animation-delay: 2s;
+}
+.moveProjectsAnimation:nth-child(4){
+    animation-delay: 2.5s;
+}
+@keyframes toTopAnimation {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }

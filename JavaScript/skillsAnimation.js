@@ -16,3 +16,17 @@ const titleSkills_Observer = new IntersectionObserver((elements) => {
 })
 
 titleSkills.forEach(element => titleSkills_Observer.observe(element))
+
+
+
+
+const cardSkills = document.querySelectorAll('.cardSkill')
+
+const cardSkills_Observer = new IntersectionObserver((elements) => {
+    elements.forEach(element => {
+        if (element.isIntersecting)
+            element.target.classList.add('scaleAnimation')
+    })
+})
+
+cardSkills.forEach(element => cardSkills_Observer.observe(element))
