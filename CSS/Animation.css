@@ -98,12 +98,12 @@
 
 .moveProjectsAnimation:nth-child(odd){
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(-100px);
     animation: toTopAnimation .5s linear forwards;
 }
 .moveProjectsAnimation:nth-child(even){
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(100px);
     animation: toTopAnimation .5s linear forwards;
 }
 .moveProjectsAnimation:nth-child(1){
